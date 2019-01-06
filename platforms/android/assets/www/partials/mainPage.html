@@ -1,0 +1,43 @@
+﻿
+<container class="mainPageCont">
+
+    <div><h4 style="text-align: -webkit-center;">חיזוי תוצאות משחקי היום</h4></div>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th>Time</th>
+            <th></th>
+            <th></th>
+            <th>Home</th>
+            <th></th>
+            <th></th>
+            <th>Away</th>
+            <th></th>
+        </tr>
+        <tr ng-repeat="game in games track by $index"
+            ng-init="calculateScore(
+                         game._links.competition.href,
+                         game.homeTeamName,
+                         game.awayTeamName,
+                         game._links.self.href,
+                         game._links.homeTeam.href,
+                         game._links.awayTeam.href,
+                         $index)">
+            <td>{{game.date.slice(8,10)}}/{{game.date.slice(5,7)}}</td>
+            <td>{{game.date.slice(11,16)}}</td>
+            <td ng-bind="game.league"></td>
+            <td><img ng-src="{{game.logo1}}" style="height: 20px;"/></td>
+            <td ng-bind="game.homeTeamName"></td>
+            <td ng-bind="game.score1"></td>
+            <td><img ng-src="{{game.logo2}}" style="height: 20px;" /></td>
+            <td ng-bind="game.awayTeamName"></td>
+            <td ng-bind="game.score2"></td>
+        </tr>
+    </table>
+
+</container>
+
+<div class="wrap ng-scope" ng-app="app" style="position: fixed; bottom: 0; margin: auto; display: block; width: 100%;">
+    <span id="timer_span"></span>
+</div>

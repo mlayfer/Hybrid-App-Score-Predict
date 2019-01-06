@@ -1,0 +1,114 @@
+* {
+    margin:0;
+    padding:0;
+    vertical-align:top;
+    outline:0;
+    font-size:100%;
+    font-family:arial;
+    border:0;
+}
+
+@font-face {
+    font-family: digital;
+    src: url(fonts/digital-7.ttf);
+}
+
+body {
+    background-color: #EFEFEF;
+}
+
+#mainWrapper {
+    padding: 3%;
+    padding-top: 7%;
+    direction: rtl;
+}
+
+.mainPageCont .row {
+    padding-bottom: 6%;
+}
+
+.halfInput {
+    width: 60%;
+    display: inline;
+    float: left;
+}
+
+header {
+    width: 100%;
+    height: 40px;
+    float: right;
+    background-color: white;
+    margin-bottom: 11px;
+    box-shadow: 0px 1px 2px 0px #ccc;
+}
+
+.headerIcon {
+    width: 30px;
+    margin: auto;
+    display: block;
+    margin-top: 5px;
+}
+
+.circles_wrap {
+    width: 100%;
+    float: right;
+    text-align: center;
+}
+
+.circle_icon {
+    display: inline-block;
+    background-color: #EFEFEF;
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 2px 3px #fff;
+    text-align: center;
+}
+
+.circle_icon span {
+    float: right;
+    clear: both;
+    width: 100%;
+    font-family: tahoma;
+    line-height: 1;
+    font-size: 11px;
+}
+
+.radioLinker {
+    width: 81px;
+    margin-top: 22px;
+    margin-right: -9px;
+    position: relative;
+    margin-left: -9px;
+    display: inline-block;
+}
+
+.big_circle_icon {
+    width: 79px;
+    height: 79px;
+}
+
+.big_circle_icon span {
+    font-size:13px;
+}
+
+.circle_icon.thisActive span, .circle_icon.thisActive i {
+    color:#ffa41c;
+}
+
+table, td, th {    
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    direction: ltr;
+}
+
+th, td {
+    padding: 3px;
+    width: 44px;
+    font-size: 11px;
+}
